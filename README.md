@@ -7,15 +7,15 @@ Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
+### Prerequisites
 
    - Python 3.6 or higher
    - Django 3.0 or higher
    - Sqlite3 database
 
-Clone the repository:
+### Clone the repository:
 
-   In bash type:
+In bash type:
 
     git clone https://github.com/ParthSathwara/Shopper.git
 
