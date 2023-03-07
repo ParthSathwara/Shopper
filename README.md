@@ -17,7 +17,7 @@ Clone the repository:
 
    In bash type:
 
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/ParthSathwara/Shopper.git
 
 
 ## Running this project
