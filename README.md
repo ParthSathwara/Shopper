@@ -55,11 +55,11 @@ python manage.py runserver
 
 The following features are available in the application:
 
-    User authentication: users can create an account and log in to the website
-    Product browsing: users can browse products by category or search for products by name or description
-    Product details: users can view detailed information about a product, including images, description, and price
-    Cart management: users can add products to their cart, view the cart, and checkout to place an order
-    Order history: users can view their order history and the status of their orders
+    - User authentication: users can create an account and log in to the website
+    - Product browsing: users can browse products by category or search for products by name or description
+    - Product details: users can view detailed information about a product, including images, description, and price
+    - Cart management: users can add products to their cart, view the cart, and checkout to place an order
+    - Order history: users can view their order history and the status of their orders
 
 ##Architecture
 
