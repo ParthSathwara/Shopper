@@ -1,5 +1,5 @@
 # Shopper
-#E-Commerce App using Django
+## E-Commerce App using Django
 
 This is an e-commerce web application built using the Django web framework. The application allows users to browse, search, and purchase products from the website.
 Getting Started
@@ -8,11 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 Prerequisites
 
-    Python 3.6 or higher
-    Django 3.0 or higher
-    Sqlite3 database
-
-Installing
+   - Python 3.6 or higher
+   - Django 3.0 or higher
+   - Sqlite3 database
 
 Clone the repository:
 
@@ -20,7 +18,6 @@ Clone the repository:
 
     git clone https://github.com/your-username/your-repo.git
 
-Features
 
 ## Running this project
 
@@ -53,6 +50,8 @@ Now you can run the project with this command
 ```
 python manage.py runserver
 ```
+
+## Features
 
 The following features are available in the application:
 
