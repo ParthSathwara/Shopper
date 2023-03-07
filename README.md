@@ -5,6 +5,7 @@ This is an e-commerce web application built using the Django web framework. The 
 Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
 Prerequisites
 
     Python 3.6 or higher
