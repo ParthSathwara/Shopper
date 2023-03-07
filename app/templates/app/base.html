@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 
 
-  <title>ShoppingX | {% block title %} {% endblock title %} </title>
+  <title>Shopper | {% block title %} {% endblock title %} </title>
 </head>
 
 <body style="background-color: rgb(241, 255, 247);">
@@ -43,8 +43,9 @@
               🖥️Electronics
             </a>
             <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-              <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
-              <li><a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a></li>
+              <li><a class="dropdown-item text-center" href="{% url 'mobile' %}">Mobile</a></li>
+              <li><a class="dropdown-item text-center" href="{% url 'laptop' %}">Laptop</a></li>
+              <li><a class="dropdown-item text-center" href="{% url 'tv' %}">TV</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -54,6 +55,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
               <li><a class="dropdown-item" href="{% url 'clothing' %}">Clothing</a></li>
+              <li><a class="dropdown-item" href="{% url 'watch' %}">Wrist Watch</a></li>
+              <li><a class="dropdown-item" href="{% url 'shoes' %}">Shoes</a></li>
               <!-- <li><a class="dropdown-item" href="#">Bottom Wear</a></li> -->
             </ul>
           </li>

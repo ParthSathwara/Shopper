@@ -119,6 +119,30 @@ def laptop(request, data=None):
     return render(request, "app/laptop.html", {"context": laptops, "total_items_count": cart_items_count(request)}) #type: ignore
 
 
+def tv(request, data=None):
+    if data == None:
+        tvs = Product.objects.filter(category="TV")
+    elif (
+        data == "LG"
+        or data == "Sony"
+        or data == "Samsung"
+    ):
+        tvs = Product.objects.filter(category="TV").filter(brand=data)
+    elif data == "Below50000":
+        tvs = Product.objects.filter(category="TV").filter(
+            discounted_price__lt=50000
+        )
+    elif data == "50000-100000":
+        tvs = Product.objects.filter(category="TV").filter(
+            discounted_price__range=(50000, 100000)
+        )
+    elif data == "Above100000":
+        tvs = Product.objects.filter(category="TV").filter(
+            discounted_price__gt=100000
+        )
+    return render(request, "app/tv.html", {"context": tvs, "total_items_count": cart_items_count(request)}) #type: ignore
+
+
 def clothing(request, data=None):
     top = Product.objects.filter(category="TW")
     bottom = Product.objects.filter(category="BW")
@@ -142,6 +166,29 @@ def clothing(request, data=None):
             "clothing": cloths,
         },
     )  # type: ignore
+
+
+def shoe(request, data=None):
+    if data == None:
+        shoes = Product.objects.filter(category="SH")
+    elif (
+        data == "Nike"
+        or data == "Reebok"
+    ):
+        shoes = Product.objects.filter(category="SH").filter(brand=data)
+    elif data == "Below3000":
+        shoes = Product.objects.filter(category="SH").filter(
+            discounted_price__lt=3000
+        )
+    elif data == "3000-10000":
+        shoes = Product.objects.filter(category="SH").filter(
+            discounted_price__range=(3000, 10000)
+        )
+    elif data == "Above10000":
+        shoes = Product.objects.filter(category="SH").filter(
+            discounted_price__gt=10000
+        )
+    return render(request, "app/shoes.html", {"context": shoes, "total_items_count": cart_items_count(request)}) #type: ignore
 
 
 @login_required

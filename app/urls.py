@@ -20,17 +20,17 @@ urlpatterns = [
     path("laptop/", views.laptop, name="laptop"),
     path("laptop/<slug:data>", views.laptop, name="laptop_flt"),
 
-    path("tv/", views.laptop, name="tv"),
-    path("tv/<slug:data>", views.laptop, name="tv_flt"),
+    path("tv/", views.tv, name="tv"),
+    path("tv/<slug:data>", views.tv, name="tv_flt"),
 
     path("clothing/", views.clothing, name="clothing"),
     path("clothing/<slug:data>", views.clothing, name="clothing_flt"),
 
-    path("shoes/", views.clothing, name="shoes"),
-    path("shoes/<slug:data>", views.clothing, name="shoes_flt"),
+    path("shoes/", views.shoe, name="shoes"),
+    path("shoes/<slug:data>", views.shoe, name="shoes_flt"),
 
-    path("watches/", views.clothing, name="watches"),
-    path("watches/<slug:data>", views.clothing, name="watches_flt"),
+    path("watch/", views.clothing, name="watch"),
+    path("watch/<slug:data>", views.clothing, name="watch_flt"),
 
     path("add-to-cart/", views.add_to_cart, name="add-to-cart"),
     path("cart/", views.show_cart, name="showcart"), #type: ignore
