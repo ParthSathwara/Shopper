@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Laptops{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="list-group">
+                <h4>Select Models</h4>
+                <a href="{% url 'laptop' %}" class="list-group-item list-group-item-action" aria-current="true">All Brands</a>
+                <a href="{% url 'laptop_flt' 'Acer' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Acer</a>
+                <a href="{% url 'laptop_flt' 'Apple' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Apple</a>
+                <a href="{% url 'laptop_flt' 'Asus' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Asus</a>
+                <a href="{% url 'laptop_flt' 'Dell' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Dell</a>
+                <a href="{% url 'laptop_flt' 'Hp' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Hp</a>
+                <a href="{% url 'laptop_flt' 'Lenovo' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Lenovo</a>
+                <br>
+                <h4>Sort by price</h4>
+                <a href="{% url 'laptop_flt' 'Below40000' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Below
+                    40000</a>
+                <a href="{% url 'laptop_flt' '40000-100000' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">40000 -
+                    100000</a>
+                <a href="{% url 'laptop_flt' 'Above100000' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Above
+                    100000</a>
+            </div>
+        </div>
+        <div class="col-sm-8 offset-sm-1">
+            <div class="row">
+                {% for product in context %}
+                <div class="col-sm-4 text-center shadow mb-4">
+                    <a href="{% url 'product-detail' product.id %}" class="btn">
+                        <div class="item">
+                            <img src="{{product.product_image.url}}" alt="" height="50" class="img-fluid">
+                            <div class="fw-bold">{{product.title|truncatechars:40}}</div>
+                            <div class="fw-bold">Rs. {{product.discounted_price}}</div>
+                            <small class="fw-light text-decoration-line-through">{{product.selling_price}}</small>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

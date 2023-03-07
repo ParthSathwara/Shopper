@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Addresses{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-2 border-end">
+            <h3>Hi {{user|title}}</h3>
+            <ul class="list-unstyled">
+                <li class="d-grid"><a href="{% url 'profile' %}" class="btn">Profile</a></li>
+                <li class="d-grid"><a href="{% url 'address' %}" class="btn {{active}}">Address</a></li>
+                <li class="d-grid"><a href="{% url 'orders' %}" class="btn">Orders</a></li>
+                <li class="d-grid"><a class="btn" href="{% url 'passwordchange' %}">Change Password</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 offset-sm-1">
+            <div class="row">
+                {% for ad in adrs %}
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Address {{forloop.counter}}</h3>
+                            <table style="width:80%">
+                                <tr>
+                                    <th>Name:</th>
+                                    <td><span class="text-capitalize">{{ad.name}}</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Locality:</th>
+                                    <td><span class="text-capitalize">{{ad.locality}}</span></td>
+                                </tr>
+                                <tr>
+                                    <th>City:</th>
+                                    <td><span class="text-capitalize"> {{ad.city}}</span></td>
+                                </tr>
+                                <tr>
+                                    <th>State:</th>
+                                    <td><span class="text-capitalize"> {{ad.state}}</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Pin Code:</th>
+                                    <td><span class="text-capitalize"> {{ad.zipcode}}</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

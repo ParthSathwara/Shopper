@@ -1,0 +1,61 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Orders{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <h3>Hi {{user|title}}</h3>
+        <div class="col-sm-2 border-end">
+            <ul class="list-unstyled">
+                <li class="d-grid"><a href="{% url 'profile' %}" class="btn">Profile</a></li>
+                <li class="d-grid"><a href="{% url 'address' %}" class="btn">Address</a></li>
+                <li class="d-grid"><a href="{% url 'orders' %}" class="btn btn-primary">Orders</a></li>
+                <li class="d-grid"><a class="btn" href="{% url 'passwordchange' %}">Change Password</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 offset-sm-1">
+            {% for o in orders %}
+            <div class="row shadow-sm mb-3">
+                <div class="col-sm-2">
+                    <a href="/product-detail/{{o.product.id}}"><img src="{{o.product.product_image.url}}" alt="" class="img-thumbnail" height="100" width="100"></a>
+                </div>
+                <div class="col-sm-7">
+                    <p><b>Product:</b> {{o.product.title}}</p>
+                    <p><b>Quantity:</b>{{o.quantity}}</p>
+                    <p><b>Price:</b> {{o.total_cost}}</p>
+                </div>
+                <div class="col-sm-3 fw-bold mt-3">
+                    <p><b>Order Status:</b></p>
+                    {% if o.status == 'Accepted' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-info bg-gradient" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>{{o.status}}</b></div>
+                    </div>
+                    {% endif %}
+                    {% if o.status == 'Packed' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-primary bg-gradient" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><b>{{o.status}}</b></div>
+                    </div>
+                    {% endif %}
+                    {% if o.status == 'On The Way' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-warning bg-gradient" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><b>{{o.status}}</b></div>
+                    </div>
+                    {% endif %}
+                    {% if o.status == 'Delivered' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-success bg-gradient" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>{{o.status}}</b></div>
+                    </div>
+                    {% endif %}
+                    {% if o.status == 'Cancel' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-success bg-gradient" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><b>{{o.status}}</b></div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock main-content %}
