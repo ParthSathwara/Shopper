@@ -4,6 +4,7 @@
 This is an e-commerce web application built using the Django web framework. The application allows users to browse, search, and purchase products from the website.
 Getting Started
 
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 Prerequisites
@@ -55,17 +56,14 @@ python manage.py runserver
 
 The following features are available in the application:
 
-    - User authentication: users can create an account and log in to the website
-    - Product browsing: users can browse products by category or search for products by name or description
-    - Product details: users can view detailed information about a product, including images, description, and price
-    - Cart management: users can add products to their cart, view the cart, and checkout to place an order
-    - Order history: users can view their order history and the status of their orders
+ - User authentication: users can create an account and log in to the website
+ - Product browsing: users can browse products by category or search for products by name or description
+ - Product details: users can view detailed information about a product, including images, description, and price
+ - Cart management: users can add products to their cart, view the cart, and checkout to place an order
+ - Order history: users can view their order history and the status of their orders
 
-##Architecture
+## Architecture
 
-The application is built using the Django web framework, which follows the Model-View-Controller (MVC) architecture pattern. The database is implemented using Sqlite3, and the front-end is implemented using HTML, CSS, Bootstrap, JavaScript and Ajax.
+- Shopper is built using the Django web framework, which follows the Model-View-Controller (MVC) architecture pattern. The database is implemented using Sqlite3, and the        front-end is implemented using HTML, CSS, Bootstrap, JavaScript and Ajax.
 
-
-
-The Shopper directory contains the main settings file and URL configuration. The app directory contains the application for managing products, users and authentication. The templates directory contains the HTML templates, the static directory contains the CSS and JavaScript files, and the media directory contains the uploaded images.
-Testing
+- The Shopper directory contains the main settings file and URL configuration. The app directory contains the application for managing products, users and authentication. The templates directory contains the HTML templates, the static directory contains the CSS and JavaScript files, and the media directory contains the uploaded images.
