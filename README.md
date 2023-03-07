@@ -14,29 +14,11 @@ Prerequisites
 
 Installing
 
-    Clone the repository:
+Clone the repository:
 
-bash
+   In bash type:
 
-git clone https://github.com/your-username/your-repo.git
-
-    Install the required Python packages:
-
-pip install -r requirements.txt
-
-    Create a PostgreSQL database:
-
-createdb ecommerce
-
-    Apply the database migrations:
-
-python manage.py migrate
-
-    Start the development server:
-
-python manage.py runserver
-
-    Open the web browser and go to http://localhost:8000/ to see the application running.
+    git clone https://github.com/your-username/your-repo.git
 
 Features
 
@@ -72,23 +54,19 @@ Now you can run the project with this command
 python manage.py runserver
 ```
 
-**Note** if you want payments to work you will need to enter your own Stripe API keys into the `.env` file in the settings files.
-
----
-
 The following features are available in the application:
 
     User authentication: users can create an account and log in to the website
     Product browsing: users can browse products by category or search for products by name or description
-    Product details: users can view detailed information about a product, including images, description, price, and reviews
+    Product details: users can view detailed information about a product, including images, description, and price
     Cart management: users can add products to their cart, view the cart, and checkout to place an order
     Order history: users can view their order history and the status of their orders
 
 ##Architecture
 
-The application is built using the Django web framework, which follows the Model-View-Controller (MVC) architecture pattern. The database is implemented using PostgreSQL, and the front-end is implemented using HTML, CSS, and JavaScript.
+The application is built using the Django web framework, which follows the Model-View-Controller (MVC) architecture pattern. The database is implemented using Sqlite3, and the front-end is implemented using HTML, CSS, Bootstrap, JavaScript and Ajax.
 
 
 
-The ecommerce directory contains the main settings file and URL configuration. The products directory contains the application for managing products, and the users directory contains the application for managing users and authentication. The templates directory contains the HTML templates, the static directory contains the CSS and JavaScript files, and the media directory contains the uploaded images.
+The Shopper directory contains the main settings file and URL configuration. The app directory contains the application for managing products, users and authentication. The templates directory contains the HTML templates, the static directory contains the CSS and JavaScript files, and the media directory contains the uploaded images.
 Testing
