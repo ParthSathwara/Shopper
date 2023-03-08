@@ -17,7 +17,7 @@
             {% for o in orders %}
             <div class="row shadow-sm mb-3">
                 <div class="col-sm-2">
-                    <a href="/product-detail/{{o.product.id}}"><img src="{{o.product.product_image.url}}" alt="" class="img-thumbnail" height="100" width="100"></a>
+                    <a href="/product-detail/{{o.product.id}}"><img src="{{o.product.product_image.url}}" alt="" class="img-thumbnail" height="100" width="100" style="object-fit: cover;"></a>
                 </div>
                 <div class="col-sm-7">
                     <p><b>Product:</b> {{o.product.title}}</p>

@@ -15,7 +15,7 @@ urlpatterns = [
     path("search/", views.search, name="search"),
 
     path("mobile/", views.mobile, name="mobile"),
-    path("mobile/<slug:data>", views.mobile, name="mobile_data"),
+    path("mobile/<slug:data>", views.mobile, name="mobile_flt"),
 
     path("laptop/", views.laptop, name="laptop"),
     path("laptop/<slug:data>", views.laptop, name="laptop_flt"),
@@ -29,8 +29,8 @@ urlpatterns = [
     path("shoes/", views.shoe, name="shoes"),
     path("shoes/<slug:data>", views.shoe, name="shoes_flt"),
 
-    path("watch/", views.clothing, name="watch"),
-    path("watch/<slug:data>", views.clothing, name="watch_flt"),
+    path("watch/", views.watches, name="watch"),
+    path("watch/<slug:data>", views.watches, name="watch_flt"),
 
     path("add-to-cart/", views.add_to_cart, name="add-to-cart"),
     path("cart/", views.show_cart, name="showcart"), #type: ignore
