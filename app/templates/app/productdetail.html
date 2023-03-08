@@ -15,13 +15,6 @@
             {% if request.user.is_authenticated and already_in_cart %}
             <a href="{% url 'showcart' %}" class="btn btn-warning shadow px-5 py-2 ms-10">Go to Cart</a>
             {% else %}
-                {% if not request.user.is_authenticated %}
-                <form action="/accounts/login" class="d-inline">
-                    <input type="hidden" name="prod_id" id="prod_id" value={{product.id}}>
-                    <button type="submit" class="btn btn-primary shadow px-5 py-2 ">Add to Cart</button>
-                </form>
-                <a href="{% url 'login' %}" class="btn btn-danger shadow px-5 py-2 ms-3">Buy Now</a>
-                {% else %}
                 <form action="/add-to-cart" class="d-inline">
                     <input type="hidden" name="prod_id" id="prod_id" value={{product.id}}>
                     <button type="submit" class="btn btn-primary shadow px-5 py-2 ">Add to Cart</button>
@@ -30,8 +23,6 @@
                     <input type="hidden" name="prod_id" id="prod_id" value={{product.id}}>
                     <button type="submit" class="btn btn-danger shadow px-5 py-2 ">Buy Now</button>
                 </form>
-                <!-- <a href="{% url 'buynow' %}" class="btn btn-danger shadow px-5 py-2 ms-3">Buy Now</a> -->
-                {% endif %}
             {% endif %}
             <h5 class="mt-5">Available Offers</h5>
             <ul>
