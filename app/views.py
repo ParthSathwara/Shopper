@@ -34,21 +34,19 @@ def search(request):
     Returns:
         HttpResponse: the search page with the matching products and query, or a warning message if no products match.
 
-    Raises:
-    None.
     """
     query = request.GET["query"]
-    if len(query) > 78:
+    if len(query) > 70 or len(query) < 1:
         allprods = Product.objects.none()
     else:
         allprodtitle = Product.objects.filter(title__icontains=query)
         allprodcat = Product.objects.filter(category__icontains=query)
         allprodbrand = Product.objects.filter(brand__icontains=query)
-        allprods = allprodtitle.union(allprodcat, allprodbrand)
+        allprods = allprodtitle | allprodcat | allprodbrand.order_by("?")
     if allprods.count() == 0:
         messages.warning(request, "No search results found. Please refine your query.")
-    params = {"allprods": allprods, "query": query}
-    return render(request, "app/search.html", params)
+    print(allprods)
+    return render(request, "app/search.html", {"context": allprods, "query": query})
 
 
 class HomeView(View):
