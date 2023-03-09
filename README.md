@@ -17,7 +17,8 @@ https://user-images.githubusercontent.com/87648167/223936601-ccf64c18-7973-404c-
 
 
 
-## These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+## Below instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
