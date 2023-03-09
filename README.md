@@ -1,6 +1,11 @@
 # Shopper
 ## E-Commerce app built using Django
 
+### Demo of home, products, product detail pages and search functionality
+https://user-images.githubusercontent.com/87648167/223929822-5d0652ed-430a-491b-8e03-1e427a100f46.mp4
+
+
+
 This is an e-commerce web application built using the Django web framework. The application allows users to browse, search, and purchase products from the website.
 Getting Started
 
