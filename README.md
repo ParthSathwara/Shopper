@@ -1,13 +1,17 @@
 # Shopper
 ## E-Commerce app built using Django
-
-### Demo of home, products, product detail pages and search functionality
-https://user-images.githubusercontent.com/87648167/223929822-5d0652ed-430a-491b-8e03-1e427a100f46.mp4
-
-
-
 This is an e-commerce web application built using the Django web framework. The application allows users to browse, search, and purchase products from the website.
 Getting Started
+
+#### Demo of: 
+   home, products, product detail, filter and search functionality
+   https://user-images.githubusercontent.com/87648167/223929822-5d0652ed-430a-491b-8e03-1e427a100f46.mp4
+
+
+#### Demo of:
+   login form, user profile form, addresses form, change password form, cart, checkout, orders 
+   https://user-images.githubusercontent.com/87648167/223936601-ccf64c18-7973-404c-b95b-d0efb35764df.mp4
+
 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -61,10 +65,11 @@ python manage.py runserver
 
 The following features are available in the application:
 
- - User authentication: users can create an account and log in to the website
+ - User authentication: users can create an account and login/logout the website
+ - User profile: user can add addresses and change password of his account
  - Product browsing: users can browse products by category or search for products by name or description
  - Product details: users can view detailed information about a product, including images, description, and price
- - Cart management: users can add products to their cart, view the cart, and checkout to place an order
+ - Cart management: users can add products to their cart, increase/decrease items, view the cart, and checkout to place an order
  - Order history: users can view their order history and the status of their orders
 
 ## Architecture
