@@ -5,11 +5,13 @@ Getting Started
 
 #### Demo of: 
 home, products, product detail, filter and search functionality
+
 https://user-images.githubusercontent.com/87648167/223929822-5d0652ed-430a-491b-8e03-1e427a100f46.mp4
 
 
 #### Demo of:
 login form, user profile form, addresses form, change password form, cart, checkout, orders 
+
 https://user-images.githubusercontent.com/87648167/223936601-ccf64c18-7973-404c-b95b-d0efb35764df.mp4
 
 
