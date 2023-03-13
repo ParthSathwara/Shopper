@@ -94,7 +94,7 @@ urlpatterns = [
         name="customerregistration",
     ),
     path(
-        "accounts/login",
+        "accounts/login/",
         auth_views.LoginView.as_view(
             template_name="app/login.html", authentication_form=LoginForm
         ),

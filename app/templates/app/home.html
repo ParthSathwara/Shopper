@@ -133,7 +133,7 @@
     <div class="owl-carousel" id="slider2">
       {% for m in mobile %}
       <a href="{% url 'product-detail' m.id %}" class="btn shadow-sm">
-        <div class="item"><img src="{{m.product_image.url}}" alt="" height="200" width="200" style="object-fit: contain;">
+        <div class="item"><img src="{{m.product_image.url}}" alt="" height="250" width="250" style="object-fit: contain;">
           <span class="fw-bold">{{m.title|truncatechars:20}}</span><br><span class="fs-5">Rs. {{m.discounted_price}}</span>
         </div>
       </a>

@@ -476,7 +476,7 @@ def remove_cart(request):
         data = {"amount": amount, "total_amount": total_amount}  # type: ignore
         return JsonResponse(data)
 
-
+@login_required
 def buy_now(request):
     """
     Adds a product to the user's cart and redirects to the checkout page.

@@ -105,7 +105,7 @@ class PlacedOrder(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
     orered_date = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(choices=STATUS_CHOICES, max_length=50, default="Pending")
+    status = models.CharField(choices=STATUS_CHOICES, max_length=50, default="Accepted")
 
     def __str__(self) -> str:
         return str(self.id)  # type: ignore
